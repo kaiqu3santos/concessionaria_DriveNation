@@ -1,0 +1,10 @@
+{
+    "admin": {
+        "nome": "admin",
+        "dataNasc": "01/01/2001",
+        "cpf": "1234",
+        "gmail": "admin",
+        "senha": "1234",
+        "salario": "2123190"
+    }
+}

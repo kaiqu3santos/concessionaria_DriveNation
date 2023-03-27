@@ -1,0 +1,12 @@
+{
+    "veiculo": {
+        "veiculo": "veiculo",
+        "funcionario": "funcionario",
+        "cliente": "cliente",
+        "valor": "valor",
+        "formaDePagamento": "formaDePagamento",
+        "valorEntrada": "valorEntrada",
+        "tempoParcela": "tempoParcela",
+        "valorParcela": "valorParcela"
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "placa": {
+        "placa": "placa",
+        "marca": "marca",
+        "modelo": "modelo",
+        "cor": "cor",
+        "combustivel": "combustivel",
+        "valor": "valor"
+    },
+    "45terw": {
+        "placa": "45terw",
+        "marca": "marca",
+        "modelo": "modelo",
+        "cor": "cor",
+        "combustivel": "combustivel",
+        "valor": "valor"
+    }
+}
