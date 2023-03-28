@@ -7,12 +7,15 @@ from E_veiculo import *
 from E_venda import *
 import json
 import F_tela_gerente
+from PyQt5 import QtCore, QtGui, QtWidgets
+import sys
+
 class C_AlterarDadosDoFuncionario():
     pass
 
 #----------------------------------------------------------------------------------------------------------
  
-class C_AlterarDadosDoVeículo():
+class C_AlterarDadosDoVeiculo():
     pass
 
 #----------------------------------------------------------------------------------------------------------
@@ -26,25 +29,26 @@ class C_cadastrarCliente:
 
 class C_cadastrarFuncionario:
 
-    def __init__ (nome, dataNasc, cpf, gmail, senha, salario):
+    def __init__ (self, gmail, senha, nome, cpf, dataNasc, salario):
         new_funcionario = funcionario(nome, dataNasc, cpf, gmail, senha, salario)
 
 #----------------------------------------------------------------------------------------------------------
 
 class C_CadastrarGerente:
-    def __init__(gmail, senha, salario, cpf):
-        new_gerente = gerente(gmail, senha, salario, cpf)
+    def __init__(self, gmail, senha, nome, cpf, dataNasc, salario):
+        new_gerente = gerente(nome, dataNasc, cpf, gmail, senha, salario)
 
 #----------------------------------------------------------------------------------------------------------
 
-class C_CadastrarVeículo:
-    def __init__(marca, modelo, cor, combustivel, especificacoes, valor, placa):
+class C_CadastrarVeiculo:
+    def __init__(placa, marca, modelo, cor, combustivel, valor, especificacoes):
         new_veiculo = veiculo(marca, modelo, cor, combustivel, especificacoes, valor, placa)
 
 #----------------------------------------------------------------------------------------------------------
 
 class C_registrarVenda:
-    def __init__  (self, veiculo, funcionario, cliente, valor, formaDePagamento, valorEntrada, tempoParcela, valorParcela):
+    def __init__  (self, veiculo, funcionario, cliente, valor, formaDePagamento, valorEntrada, tempoParcela):
+        valorParcela = (float(valor) - float(valorEntrada))/float(tempoParcela)
         new_venda = venda(veiculo, funcionario, cliente, valor, formaDePagamento, valorEntrada, tempoParcela, valorParcela)
 
 #----------------------------------------------------------------------------------------------------------
@@ -74,9 +78,22 @@ class C_EfetuarLogon:
             if (self.gmail in data):
                 gerente = data[self.gmail]
                 if (gerente["senha"] == (self.senha)):
-                    F_tela_gerente.a()
-                    self.tela.close()
-F_tela_gerente.Ui_MainWindow()
+                    self.tela_gerente()
+
+            with open('_funcionarios.json') as f:
+                    data = json.load(f)
+
+            if (self.gmail in data):
+                gerente = data[self.gmail]
+                if (gerente["senha"] == (self.senha)):
+                    self.tela_funcionario()       
+
+    def tela_gerente(self):
+        self.tela.tela_gerente()
+
+    def tela_funcionario(self):
+        self.tela.tela_funcionario()
+
 #C_EfetuarLogon('admin', '1234')
 #----------------------------------------------------------------------------------------------------------
 

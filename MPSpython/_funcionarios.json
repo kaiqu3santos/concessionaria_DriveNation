@@ -1,3 +1,34 @@
 {
-
+    "guga": {
+        "nome": "luiz",
+        "dataNasc": "01/01/2001",
+        "cpf": "123434234",
+        "gmail": "guga",
+        "senha": "1234",
+        "salario": "2123190"
+    },
+    "lucas@gmail.com": {
+        "nome": "lucas",
+        "dataNasc": "01/01/2001",
+        "cpf": "124213451",
+        "gmail": "lucas@gmail.com",
+        "senha": "12345",
+        "salario": "52345346752"
+    },
+    "GMAIL": {
+        "nome": "NOME",
+        "dataNasc": "DATA DE NASCIMENTO",
+        "cpf": "CPF",
+        "gmail": "GMAIL",
+        "senha": "SENHA",
+        "salario": "SAL\u00c1RIO"
+    },
+    "danilo": {
+        "nome": "danilo",
+        "dataNasc": "DATA DE NASCIMENTO",
+        "cpf": "CPF",
+        "gmail": "danilo",
+        "senha": "12345",
+        "salario": "SAL\u00c1RIO"
+    }
 }

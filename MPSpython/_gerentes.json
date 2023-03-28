@@ -6,5 +6,13 @@
         "gmail": "admin",
         "senha": "1234",
         "salario": "2123190"
+    },
+    "GMAIL": {
+        "nome": "NOME",
+        "dataNasc": "DATA DE NASCIMENTO",
+        "cpf": "CPF",
+        "gmail": "GMAIL",
+        "senha": "SENHA",
+        "salario": "SAL\u00c1RIO"
     }
 }

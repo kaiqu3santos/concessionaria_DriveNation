@@ -10,16 +10,29 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from Controles import C_EfetuarLogon
+import F_tela_gerente
+import F_tela_funcionario
 
 class Ui_MainWindow(object):
 
-
     #--------------------------------------------FRONTEIRA--------------------------------------------
-    def f_efetuar_login(self):
+    def f_efetuar_login(self, MainWindow):
         gmail = self.lineEdit.text()
         senha = self.lineEdit_2.text()
         if gmail != "" and senha != "":
             C_EfetuarLogon(self, gmail, senha)
+
+    def tela_gerente (self):
+        self.window2 = QtWidgets.QMainWindow()
+        self.ui = F_tela_gerente.Ui_MainWindow()
+        self.ui.setupUi(self.window2)
+        self.window2.show()
+    
+    def tela_funcionario(self):
+        self.window2 = QtWidgets.QMainWindow()
+        self.ui = F_tela_funcionario.Ui_MainWindow()
+        self.ui.setupUi(self.window2)
+        self.window2.show()
 
     #-------------------------------------------------------------------------------------------------
 
@@ -80,6 +93,7 @@ class Ui_MainWindow(object):
         self.pushButton = QtWidgets.QPushButton(self.left_menu)
         self.pushButton.setGeometry(QtCore.QRect(170, 350, 93, 28))
         self.pushButton.setObjectName("pushButton")
+#       self.pushButton.clicked.connect(self.tela_funcionario)
         self.label = QtWidgets.QLabel(self.left_menu)
         self.label.setGeometry(QtCore.QRect(170, 170, 81, 41))
         font = QtGui.QFont()
@@ -122,6 +136,6 @@ if __name__ == "__main__":
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
     ui.setupUi(MainWindow)
-    ui.pushButton.clicked.connect(ui.f_efetuar_login)                                                                    
+    ui.pushButton.clicked.connect(lambda:ui.f_efetuar_login(MainWindow))                                                                    
     MainWindow.show()
     sys.exit(app.exec_())
