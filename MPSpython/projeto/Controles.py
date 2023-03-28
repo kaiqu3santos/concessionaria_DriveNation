@@ -7,6 +7,7 @@ from E_veiculo import *
 from E_venda import *
 import json
 import F_tela_gerente
+import F_veiculos
 from PyQt5 import QtCore, QtGui, QtWidgets
 import sys
 
@@ -41,8 +42,20 @@ class C_CadastrarGerente:
 #----------------------------------------------------------------------------------------------------------
 
 class C_CadastrarVeiculo:
-    def __init__(placa, marca, modelo, cor, combustivel, valor, especificacoes):
-        new_veiculo = veiculo(marca, modelo, cor, combustivel, especificacoes, valor, placa)
+    def __init__(self, placa, marca, modelo, cor, combustivel, valor, especificacoes):
+        
+        new = True
+
+        with open("_veiculos.json", encoding='utf-8') as carros:
+            dados = json.load(carros)
+
+        for i in dados:
+            carro = (i['placa'])
+            if placa == carro:
+                new = False
+
+        if new:
+            new_veiculo = veiculo(placa, marca, modelo, cor, combustivel, especificacoes, valor)
 
 #----------------------------------------------------------------------------------------------------------
 
@@ -107,14 +120,28 @@ class C_GerenciarFaturamento:
 
 #----------------------------------------------------------------------------------------------------------
 
-class C_PagarFuncionário:
-    pass
+class C_VisualizarFuncionarios:
+    
+    def __init__(self):
+        self.lista_funcionarios = []
+        with open("_funcionarios.json", encoding='utf-8') as funcionarios:
+            dados = json.load(funcionarios)
 
+        for i in dados:
+            funcionario = 'NOME: '+i['nome']+', GMAIL: '+i['gmail']+ ', SALARIO: '+ i['salario']
+            self.lista_funcionarios.append(funcionario)
 #----------------------------------------------------------------------------------------------------------
 
-class C_RegistrarVenda:
-    pass
+class C_VisualizarVendas:
+    
+    def __init__(self):
+        self.lista_vendas = []
+        with open("_vendas.json", encoding='utf-8') as vendas:
+            dados = json.load(vendas)
 
+        for i in dados:
+            venda = 'VEICULO: '+i['veiculo']+', VALOR: '+i['valor']+ ', FUNCIONARIO: '+ i['funcionario'] +', CLIENTE: '+i['cliente']
+            self.lista_vendas.append(venda)
 #----------------------------------------------------------------------------------------------------------
 
 class C_VisualizarFaturamentoFuncionario:
@@ -134,3 +161,17 @@ class C_VisualizarFuncionario:
 
 class C_VisualizarVeiculo:
     pass
+
+#----------------------------------------------------------------------------------------------------------
+
+class C_VisualizarVeiculos:
+    
+    def __init__(self):
+        self.veiculos = []
+
+        with open("_veiculos.json", encoding='utf-8') as carros:
+            dados = json.load(carros)
+
+        for i in dados:
+            carro = i['marca']+', '+ i['modelo'] +', '+i['placa']
+            self.veiculos.append(carro)

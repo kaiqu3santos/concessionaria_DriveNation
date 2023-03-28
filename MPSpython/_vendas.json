@@ -1,5 +1,5 @@
-{
-    "veiculo": {
+[
+    {
         "veiculo": "veiculo",
         "funcionario": "funcionario",
         "cliente": "cliente",
@@ -9,14 +9,14 @@
         "tempoParcela": "tempoParcela",
         "valorParcela": "valorParcela"
     },
-    "PLACA DO VE\u00cdCULO": {
-        "veiculo": "PLACA DO VE\u00cdCULO",
-        "funcionario": "CPF DO FUNCION\u00c1RIO",
-        "cliente": "CPF DO CLIENTE",
-        "valor": "10000",
-        "formaDePagamento": "FORMA DE PAGAMENTO",
-        "valorEntrada": "5000",
-        "tempoParcela": "5",
-        "valorParcela": 1000.0
+    {
+        "veiculo": "veiculo",
+        "funcionario": "funcionario",
+        "cliente": "cliente",
+        "valor": "valor",
+        "formaDePagamento": "formaDePagamento",
+        "valorEntrada": "valorEntrada",
+        "tempoParcela": "tempoParcela",
+        "valorParcela": "valorParcela"
     }
-}
+]

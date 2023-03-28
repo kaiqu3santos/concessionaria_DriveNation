@@ -23,7 +23,7 @@ class Ui_MainWindow(object):
         combustivel = self.lineEdit.text()
         valor = self.lineEdit_2.text()
         especificacoes = self.textEdit.toPlainText()
-        if placa != "" and marca != "" and modelo != "" and cor != "" and combustivel != "" and valor != "" and especificacoes != "":
+        if placa != "PLACA" and placa != "" and marca != "" and modelo != "" and cor != "" and combustivel != "" and valor != "" and especificacoes != "":
             Controles.C_CadastrarVeiculo(placa, marca, modelo, cor, combustivel, valor, especificacoes)
 
             self.MainWindow.close()
@@ -177,6 +177,7 @@ class Ui_MainWindow(object):
         self.lineEdit_5.setText(_translate("MainWindow", "COR"))
         self.lineEdit.setText(_translate("MainWindow", "COMBUSTÍVEL"))
         self.pushButton_17.setText(_translate("MainWindow", "VOLTAR"))
+        self.pushButton_17.clicked.connect(lambda:self.MainWindow.close())
         self.lineEdit_4.setText(_translate("MainWindow", "MODELO"))
         self.lineEdit_2.setText(_translate("MainWindow", "VALOR"))
         self.lineEdit_3.setText(_translate("MainWindow", "PLACA"))
@@ -188,6 +189,7 @@ class Ui_MainWindow(object):
 "<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">ESPECIFICAÇÕES</p>\n"
 "<p style=\"-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><br /></p></body></html>"))
         self.pushButton_18.setText(_translate("MainWindow", "CADASTRAR"))
+        self.pushButton_18.clicked.connect(lambda:self.f_cad_veiculo())
 
 
 if __name__ == "__main__":

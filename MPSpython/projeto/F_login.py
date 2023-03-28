@@ -12,6 +12,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 from Controles import C_EfetuarLogon
 import F_tela_gerente
 import F_tela_funcionario
+import F_veiculos
 
 class Ui_MainWindow(object):
 
@@ -37,6 +38,9 @@ class Ui_MainWindow(object):
     #-------------------------------------------------------------------------------------------------
 
     def setupUi(self, MainWindow):
+
+        self.MainWindow = MainWindow
+
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(906, 620)
         self.centralwidget = QtWidgets.QWidget(MainWindow)

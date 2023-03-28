@@ -10,6 +10,11 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import F_cad_funcionario
 import F_tela_funcionario
+import F_cad_veiculo
+import F_cad_gerente
+import F_veiculos
+import F_vendas
+import F_funcionarios
 
 class Ui_MainWindow(object):
 
@@ -21,9 +26,39 @@ class Ui_MainWindow(object):
         self.ui.setupUi(self.window2)
         self.window2.show()
 
-    def tela_funcionario(self):
+    def f_tela_funcionario(self):
         self.window2 = QtWidgets.QMainWindow()
         self.ui = F_tela_funcionario.Ui_MainWindow()
+        self.ui.setupUi(self.window2)
+        self.window2.show()
+        
+    def f_cad_veiculo(self):
+        self.window2 = QtWidgets.QMainWindow()
+        self.ui = F_cad_veiculo.Ui_MainWindow()
+        self.ui.setupUi(self.window2)
+        self.window2.show()
+
+    def f_cad_gerente(self):
+        self.window2 = QtWidgets.QMainWindow()
+        self.ui = F_cad_gerente.Ui_MainWindow()
+        self.ui.setupUi(self.window2)
+        self.window2.show()
+
+    def f_veiculos(self):
+        self.window2 = QtWidgets.QMainWindow()
+        self.ui = F_veiculos.Ui_MainWindow()
+        self.ui.setupUi(self.window2)
+        self.window2.show()
+
+    def f_vendas(self):
+        self.window2 = QtWidgets.QMainWindow()
+        self.ui = F_vendas.Ui_MainWindow()
+        self.ui.setupUi(self.window2)
+        self.window2.show()
+
+    def f_funcionarios(self):
+        self.window2 = QtWidgets.QMainWindow()
+        self.ui = F_funcionarios.Ui_MainWindow()
         self.ui.setupUi(self.window2)
         self.window2.show()
 
@@ -176,16 +211,21 @@ class Ui_MainWindow(object):
 "DriveNation"))
         self.label_3.setText(_translate("MainWindow", "Você mais veloz"))
         self.pushButton_2.setText(_translate("MainWindow", "GERENCIAR FATURAMENTO"))
+        self.pushButton_2.clicked.connect(lambda:self.f_vendas())
         self.pushButton_4.setText(_translate("MainWindow", "CADASTRAR GERENTE"))
+        self.pushButton_4.clicked.connect(lambda:self.f_cad_gerente())
         self.pushButton_5.setText(_translate("MainWindow", "VISUALIZAR FUNCIONÁRIOS"))
-        self.pushButton_3.setText(_translate("MainWindow", "CADASTRAR VEÍCULO"))
+        self.pushButton_5.clicked.connect(lambda:self.f_funcionarios())
+        self.pushButton_3.setText(_translate("MainWindow", "CADASTRAR VEICULOS"))
+        self.pushButton_3.clicked.connect(lambda:self.f_cad_veiculo())
         self.pushButton.setText(_translate("MainWindow", "LOGOFF"))
         self.pushButton.clicked.connect(lambda:self.MainWindow.close())
         self.pushButton_6.setText(_translate("MainWindow", "CADASTRAR FUNCIONÁRIO"))
         self.pushButton_6.clicked.connect(lambda:self.f_cad_funcionario())
-        self.pushButton_7.setText(_translate("MainWindow", "VISUALIZAR VEÍCULO"))
+        self.pushButton_7.setText(_translate("MainWindow", "VISUALIZAR VEICULOS"))
+        self.pushButton_7.clicked.connect(lambda:self.f_veiculos())
         self.pushButton_8.setText(_translate("MainWindow", "FUNCIONÁRIO"))
-        self.pushButton_8.clicked.connect(lambda:self.tela_funcionario())
+        self.pushButton_8.clicked.connect(lambda:self.f_tela_funcionario())
 
 if __name__ == "__main__":
     import sys

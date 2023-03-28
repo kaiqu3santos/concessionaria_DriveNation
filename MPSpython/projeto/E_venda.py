@@ -24,9 +24,9 @@ class venda:
                                   'cliente':self.cliente, 'valor':valor, 
                                   'formaDePagamento':formaDePagamento, 'valorEntrada':valorEntrada, 
                                   'tempoParcela':tempoParcela, 'valorParcela':valorParcela}
-                    data[self.veiculo] = dictionary
+                    data.append(dictionary)
 
                     with open('_vendas.json', 'w') as outfile:
                             json.dump(data, outfile, indent=4)
 
-v1 = venda('veiculo', 'funcionario', 'cliente', 'valor', 'formaDePagamento', 'valorEntrada', 'tempoParcela', 'valorParcela')
+#v1 = venda('veiculo', 'funcionario', 'cliente', 'valor', 'formaDePagamento', 'valorEntrada', 'tempoParcela', 'valorParcela')

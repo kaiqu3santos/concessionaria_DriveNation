@@ -27,10 +27,10 @@ class veiculo:
                     
                     dictionary = {"placa": self.placa, "marca":self.marca,"modelo":self.modelo, 
                                   "cor":self.cor, "combustivel":self.combustivel, "valor": self.valor}
-                    data[self.placa] = dictionary
+                    data.append(dictionary)
 
                     with open('_veiculos.json', 'w') as outfile:
                             json.dump(data, outfile, indent=4)
 
-v1 = veiculo('placa', 'marca', 'modelo', 'cor', 'combustivel', 'especificacoes', 'valor')
-v2 = veiculo('45terw', 'marca', 'modelo', 'cor', 'combustivel', 'especificacoes', 'valor')
+#v1 = veiculo('placa', 'marca', 'modelo', 'cor', 'combustivel', 'especificacoes', 'valor')
+#v2 = veiculo('45terw', 'marca', 'modelo', 'cor', 'combustivel', 'especificacoes', 'valor')
