@@ -18,5 +18,75 @@
         "valorEntrada": "valorEntrada",
         "tempoParcela": "tempoParcela",
         "valorParcela": "valorParcela"
+    },
+    {
+        "veiculo": "12345",
+        "funcionario": "admin",
+        "cliente": "123456",
+        "valor": "1000000",
+        "formaDePagamento": "debito",
+        "valorEntrada": "10000",
+        "tempoParcela": "5",
+        "valorParcela": 198000.0
+    },
+    {
+        "veiculo": "12345",
+        "funcionario": "admin",
+        "cliente": "123456",
+        "valor": "1000000",
+        "formaDePagamento": "debito",
+        "valorEntrada": "10000",
+        "tempoParcela": "5",
+        "valorParcela": 198000.0
+    },
+    {
+        "veiculo": "12345",
+        "funcionario": "admin",
+        "cliente": "123456",
+        "valor": "1000000",
+        "formaDePagamento": "debito",
+        "valorEntrada": "10000",
+        "tempoParcela": "5",
+        "valorParcela": 198000.0
+    },
+    {
+        "veiculo": "12345",
+        "funcionario": "admin",
+        "cliente": "123456",
+        "valor": "1000000",
+        "formaDePagamento": "debito",
+        "valorEntrada": "10000",
+        "tempoParcela": "5",
+        "valorParcela": 198000.0
+    },
+    {
+        "veiculo": "12345",
+        "funcionario": "admin",
+        "cliente": "123456",
+        "valor": "1000000",
+        "formaDePagamento": "debito",
+        "valorEntrada": "10000",
+        "tempoParcela": "5",
+        "valorParcela": 198000.0
+    },
+    {
+        "veiculo": "12345",
+        "funcionario": "admin",
+        "cliente": "123456",
+        "valor": "1000000",
+        "formaDePagamento": "debito",
+        "valorEntrada": "10000",
+        "tempoParcela": "5",
+        "valorParcela": 198000.0
+    },
+    {
+        "veiculo": "4321",
+        "funcionario": "admin",
+        "cliente": "902.029.123-21",
+        "valor": "100000",
+        "formaDePagamento": "pacelado a vista",
+        "valorEntrada": "20000",
+        "tempoParcela": "7",
+        "valorParcela": 11428.57142857143
     }
 ]

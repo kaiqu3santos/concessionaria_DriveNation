@@ -23,16 +23,18 @@ class Ui_MainWindow(object):
         if gmail != "" and senha != "":
             C_EfetuarLogon(self, gmail, senha)
 
-    def tela_gerente (self):
+    def tela_gerente (self, gmail):
         self.window2 = QtWidgets.QMainWindow()
         self.ui = F_tela_gerente.Ui_MainWindow()
-        self.ui.setupUi(self.window2)
+        gmail = self.lineEdit.text()
+        self.ui.setupUi(self.window2, gmail)
         self.window2.show()
     
     def tela_funcionario(self):
         self.window2 = QtWidgets.QMainWindow()
         self.ui = F_tela_funcionario.Ui_MainWindow()
-        self.ui.setupUi(self.window2)
+        gmail = self.lineEdit.text()
+        self.ui.setupUi(self.window2, gmail)
         self.window2.show()
 
     #-------------------------------------------------------------------------------------------------

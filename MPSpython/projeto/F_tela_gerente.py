@@ -29,7 +29,7 @@ class Ui_MainWindow(object):
     def f_tela_funcionario(self):
         self.window2 = QtWidgets.QMainWindow()
         self.ui = F_tela_funcionario.Ui_MainWindow()
-        self.ui.setupUi(self.window2)
+        self.ui.setupUi(self.window2, self.gmail)
         self.window2.show()
         
     def f_cad_veiculo(self):
@@ -64,9 +64,10 @@ class Ui_MainWindow(object):
 
     #-------------------------------------------------------------------------------------------------
 
-    def setupUi(self, MainWindow):
+    def setupUi(self, MainWindow, gmail):
 
         self.MainWindow = MainWindow
+        self.gmail = gmail
 
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(906, 620)

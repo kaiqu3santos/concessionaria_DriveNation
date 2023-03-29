@@ -63,12 +63,33 @@ class C_registrarVenda:
     def __init__  (self, veiculo, funcionario, cliente, valor, formaDePagamento, valorEntrada, tempoParcela):
         valorParcela = (float(valor) - float(valorEntrada))/float(tempoParcela)
         new_venda = venda(veiculo, funcionario, cliente, valor, formaDePagamento, valorEntrada, tempoParcela, valorParcela)
+        C_DescadastrarVeículo(veiculo)
 
 #----------------------------------------------------------------------------------------------------------
 
 class C_DescadastrarVeículo:
-    pass
+    
+    def __init__(self, placa):
+        self.placa = placa
 
+        with open("_veiculos.json", encoding='utf-8') as carros:
+            dados = json.load(carros)
+
+        index = ''
+
+        for i in dados:
+            if i['placa'] == self.placa:
+                index = dados.index(i)
+        
+        if index != '':
+            with open("_veiculos.json", "r") as file:
+                data = json.load(file)
+                data.pop(index)
+
+            with open('_veiculos.json', 'w') as file:
+                json.dump(data, file)
+
+#c1 = C_DescadastrarVeículo('placa')
 
 #----------------------------------------------------------------------------------------------------------
 
@@ -98,16 +119,37 @@ class C_EfetuarLogon:
                     self.tela_funcionario()       
 
     def tela_gerente(self):
-        self.tela.tela_gerente()
+        self.tela.tela_gerente(self.gmail)
 
     def tela_funcionario(self):
-        self.tela.tela_funcionario()
+        self.tela.tela_funcionario(self.gmail)
 
 #C_EfetuarLogon('admin', '1234')
 #----------------------------------------------------------------------------------------------------------
 
 class C_ExcluirFuncionario:
-    pass
+    
+    def __init__(self, cpf):
+        self.cpf = cpf
+
+        with open("_funcionarios.json", encoding='utf-8') as carros:
+            dados = json.load(carros)
+
+        index = ''
+
+        for i in dados:
+            if i['cpf'] == self.cpf:
+                index = dados.index(i)
+        
+        if index != '':
+            with open("_funcionarios.json", "r") as file:
+                data = json.load(file)
+                data.pop(index)
+
+            with open('_funcionarios.json', 'w') as file:
+                json.dump(data, file)
+
+#c = C_ExcluirFuncionario("12343433234")
 
 #----------------------------------------------------------------------------------------------------------
 
@@ -138,6 +180,7 @@ class C_VisualizarVendas:
         for i in dados:
             venda = 'VEICULO: '+i['veiculo']+', VALOR: '+i['valor']+ ', FUNCIONARIO: '+ i['funcionario'] +', CLIENTE: '+i['cliente']
             self.lista_vendas.append(venda)
+
 #----------------------------------------------------------------------------------------------------------
 
 class C_VisualizarFaturamentoFuncionario:

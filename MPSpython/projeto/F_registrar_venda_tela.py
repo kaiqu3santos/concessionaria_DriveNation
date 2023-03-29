@@ -26,12 +26,14 @@ class Ui_MainWindow(object):
         if placa != "" and cpf_func != "" and cpf_cliente != "" and valor != "" and forma_de_pagamento != "" and valor_entrada != "" and tempo_parcela != "":
             if float(valor) and float(valor_entrada) and int(tempo_parcela): 
                 Controles.C_registrarVenda(placa, cpf_func, cpf_cliente, valor, forma_de_pagamento, valor_entrada, tempo_parcela)
-
+        self.MainWindow.close()
+        
     #-------------------------------------------------------------------------------------------------
 
-    def setupUi(self, MainWindow):
+    def setupUi(self, MainWindow, gmail):
 
         self.MainWindow = MainWindow
+        self.gmail = gmail
 
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(906, 620)
@@ -174,7 +176,7 @@ class Ui_MainWindow(object):
         self.label_9.setText(_translate("MainWindow", "Você mais veloz"))
         self.lineEdit.setText(_translate("MainWindow", "VALOR TOTAL DO VEÍCULO"))
         self.lineEdit_2.setText(_translate("MainWindow", "FORMA DE PAGAMENTO"))
-        self.lineEdit_4.setText(_translate("MainWindow", "CPF DO FUNCIONÁRIO"))
+        self.lineEdit_4.setText(_translate("MainWindow", self.gmail))
         self.lineEdit_3.setText(_translate("MainWindow", "VALOR DE ENTRADA"))
         self.lineEdit_8.setText(_translate("MainWindow", "PLACA DO VEÍCULO"))
         self.lineEdit_5.setText(_translate("MainWindow", "CPF DO CLIENTE"))

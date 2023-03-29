@@ -1,9 +1,9 @@
-{
-    "CPF": {
-        "nome": "GMAIL",
-        "rg": "RG",
-        "cpf": "CPF",
-        "gmail": "NOME",
-        "telefone": "TELEFONE"
+[
+    {
+        "nome": "danilo",
+        "rg": "7812643",
+        "cpf": "4326234643",
+        "gmail": "danilo@gmail.com",
+        "telefone": "82174"
     }
-}
+]

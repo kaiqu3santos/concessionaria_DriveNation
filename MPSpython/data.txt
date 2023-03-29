@@ -1,0 +1,1 @@
+[{"placa": "UTF8989", "marca": "Renault", "modelo": "Sandero", "cor": "Azul", "combustivel": "gasolina", "valor": "60000"}, {"placa": "CHG9873", "marca": "porsche", "modelo": "porsche", "cor": "preto", "combustivel": "gasolina", "valor": "1000000"}]

@@ -24,7 +24,7 @@ class cliente:
                             raise ("ERRO")
                     
                     dictionary = {"nome": self.nome, "rg":self.rg,"cpf":self.cpf, "gmail":self.gmail, "telefone":self.telefone}
-                    data[self.cpf] = dictionary
+                    data.append(dictionary)
 
                     with open('_clientes.json', 'w') as outfile:
                             json.dump(data, outfile, indent=4)

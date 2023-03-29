@@ -34,3 +34,5 @@ class veiculo:
 
 #v1 = veiculo('placa', 'marca', 'modelo', 'cor', 'combustivel', 'especificacoes', 'valor')
 #v2 = veiculo('45terw', 'marca', 'modelo', 'cor', 'combustivel', 'especificacoes', 'valor')
+#v3 = veiculo('12345', 'marca', 'modelo', 'cor', 'combustivel', 'especificacoes', 'valor')
+#v4 = veiculo('4321', 'marca', 'modelo', 'cor', 'combustivel', 'especificacoes', 'valor')
