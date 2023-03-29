@@ -11,6 +11,7 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 import F_registrar_venda_tela
 import F_cad_cliente_tela
+import F_veiculos
 
 class Ui_MainWindow(object):
 
@@ -25,6 +26,12 @@ class Ui_MainWindow(object):
     def f_cad_cliente (self):
         self.window2 = QtWidgets.QMainWindow()
         self.ui = F_cad_cliente_tela.Ui_MainWindow()
+        self.ui.setupUi(self.window2)
+        self.window2.show()
+
+    def f_veiculos(self):
+        self.window2 = QtWidgets.QMainWindow()
+        self.ui = F_veiculos.Ui_MainWindow()
         self.ui.setupUi(self.window2)
         self.window2.show()
 
@@ -159,6 +166,7 @@ class Ui_MainWindow(object):
         self.pushButton.clicked.connect(lambda:self.MainWindow.close())
         self.pushButton_3.clicked.connect(lambda:self.f_registrar_venda())
         self.pushButton_2.clicked.connect(lambda:self.f_cad_cliente())
+        self.pushButton_4.clicked.connect(lambda:self.f_veiculos())
 
 
 if __name__ == "__main__":

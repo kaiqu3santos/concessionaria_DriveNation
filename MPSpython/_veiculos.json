@@ -14,5 +14,13 @@
         "cor": "azul",
         "combustivel": "gasolina",
         "valor": "10000"
+    },
+    {
+        "placa": "CHG9873",
+        "marca": "porsche",
+        "modelo": "porsche",
+        "cor": "preto",
+        "combustivel": "gasolina",
+        "valor": "1000000"
     }
 ]
